@@ -52,11 +52,11 @@ public class OrderedWalker extends SourceFileWalker
 		for (File f : dirContent)
 		{
 			Path filePath = f.toPath();
-			String absolutePath = f.getAbsolutePath();
+//			String absolutePath = f.getAbsolutePath();
 
 			if (f.isDirectory())
 			{
-				walk(absolutePath);
+				walk(f.getPath());
 				continue;
 			}
 

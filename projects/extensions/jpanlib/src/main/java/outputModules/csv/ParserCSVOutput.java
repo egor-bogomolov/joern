@@ -39,9 +39,11 @@ public abstract class ParserCSVOutput extends Parser
 	private void createOutputDirectory()
 	{
 		File outputDirectory = new File(outputDir);
-		if (outputDirectory.exists())
-			throw new RuntimeException("Output directory already exists");
-
+		if (outputDirectory.exists()) {
+			return;
+//			throw new RuntimeException("Output directory already exists");
+		}
+		
 		try
 		{
 			outputDirectory.mkdirs();

@@ -29,7 +29,7 @@ task joernTools(type: Exec) {
 
 // Copy extensions and plugins into Octopus plugin directory
 
-task deploy(dependsOn: build) << {
+task deploy(dependsOn: build) {
     copy {
         into "projects/octopus/plugins"
         from fileTree("projects/plugins").files
